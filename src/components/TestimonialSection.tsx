@@ -12,12 +12,20 @@ const TestimonialSection = () => {
           </p>
 
           <div className="flex items-center justify-center gap-4">
-            <div className="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center">
-              <span className="text-white font-semibold text-sm">PC</span>
+            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+              <span className="text-white font-semibold text-sm">SM</span>
             </div>
             <div className="text-left">
-              <p className="font-semibold text-black">Flower Lewin C..</p>
-              <p className="text-gray-600 text-sm">Director de Tecnología</p>
+              <p className="font-semibold text-foreground">E. Smith Moreno</p>
+              <p className="text-muted-foreground text-sm">Director de Tecnología</p>
+              <a 
+                href="https://devmoreno.me" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-primary hover:underline"
+              >
+                devmoreno.me
+              </a>
             </div>
           </div>
         </div>

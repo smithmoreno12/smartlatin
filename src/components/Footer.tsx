@@ -28,14 +28,14 @@ const Footer = () => {
             </ul>
           </div>
 
-         {/* Connect Column */}
+          {/* Connect Column */}
           <div>
             <h3 className="font-semibold text-black mb-4">Conectar</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
-                <a href="https://www.instagram.com/maickmoreno12/profilecard/?igsh=MTBwdzFhMjdld21zYQ%3D%3D" target="_blank" className="flex items-center gap-2 hover:text-black transition-colors">
-                  <Instagram className="w-4 h-4" />
-                  Instagram
+                <a href="https://devmoreno.me" target="_blank" className="flex items-center gap-2 hover:text-black transition-colors">
+                  <span className="w-4 h-4 bg-primary rounded-sm flex items-center justify-center text-white text-xs font-bold">W</span>
+                  devmoreno.me
                 </a>
               </li>
               <li>
@@ -45,9 +45,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/smith-moreno-83773a280/" target="_blank" className="flex items-center gap-2 hover:text-black transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
+                <a href="https://twitter.com/smithmoreno12" target="_blank" className="flex items-center gap-2 hover:text-black transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  Twitter
                 </a>
               </li>
             </ul>

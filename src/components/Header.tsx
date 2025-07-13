@@ -24,7 +24,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-8">
           <a href="#servicios" className="nav-link">Servicios</a>
           <Link to="/projects" className="nav-link">Proyectos</Link>
-          <a href="#contacto" className="nav-link">Contacto</a>
+          <a href="#acerca" className="nav-link">Acerca de</a>
         </nav>
 
         {/* Toggle dark/light + botón móvil */}
@@ -52,7 +52,7 @@ const Header = () => {
           <ul className="flex flex-col items-center gap-6 py-6">
             <li><a onClick={() => setOpen(false)} href="#servicios" className="nav-mobile">Servicios</a></li>
             <li><Link onClick={() => setOpen(false)} to="/projects" className="nav-mobile">Proyectos</Link></li>
-            <li><a onClick={() => setOpen(false)} href="#contacto" className="nav-mobile">Contacto</a></li>
+            <li><a onClick={() => setOpen(false)} href="#acerca" className="nav-mobile">Acerca de</a></li>
           </ul>
         </nav>
       )}
