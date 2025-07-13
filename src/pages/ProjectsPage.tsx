@@ -20,8 +20,8 @@ const ProjectsPage = () => {
     <div className="min-h-screen bg-background">
       {/* Header with Back Button */}
       <div className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
             <Link to="/">
               <Button variant="ghost" size="sm" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
@@ -29,22 +29,22 @@ const ProjectsPage = () => {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold">Nuestros Proyectos</h1>
-              <p className="text-muted-foreground">Explora nuestro portafolio completo</p>
+              <h1 className="text-xl sm:text-2xl font-bold">Nuestros Proyectos</h1>
+              <p className="text-sm sm:text-base text-muted-foreground">Explora nuestro portafolio completo</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Search Bar */}
-        <div className="relative mb-8 animate-fade-in">
+        <div className="relative mb-6 sm:mb-8 animate-fade-in">
           <input
             type="text"
             placeholder="Buscar proyectos..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 pr-12 border border-border rounded-lg bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+            className="w-full px-4 py-3 pr-12 border border-border rounded-lg bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 text-sm sm:text-base"
           />
           <Button
             size="sm"
@@ -55,7 +55,7 @@ const ProjectsPage = () => {
         </div>
 
         {/* Filter Tags */}
-        <div className="flex flex-wrap gap-2 mb-12 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        <div className="flex flex-wrap gap-2 mb-8 sm:mb-12 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           {categories.map((category, index) => (
             <Badge
               key={category}
@@ -74,26 +74,26 @@ const ProjectsPage = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <Card 
               key={project.id} 
               className="group overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in bg-card/50 backdrop-blur-sm"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`${project.bgColor} p-8 flex items-center justify-center min-h-[200px] relative overflow-hidden`}>
-                <div className="w-32 h-24 bg-white/80 dark:bg-black/20 rounded-lg shadow-lg flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+              <div className={`${project.bgColor} p-6 sm:p-8 flex items-center justify-center min-h-[160px] sm:min-h-[200px] relative overflow-hidden`}>
+                <div className="w-24 h-20 sm:w-32 sm:h-24 bg-white/80 dark:bg-black/20 rounded-lg shadow-lg flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                   <span className="text-muted-foreground text-xs font-medium">Preview</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300 text-sm sm:text-base">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-3 mb-3">
+                  <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3 mb-3">
                     {project.description}
                   </p>
                 </div>
@@ -111,10 +111,10 @@ const ProjectsPage = () => {
                   )}
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Youtube className="w-4 h-4" />
-                    <span className="text-sm">Demo</span>
+                    <span className="text-xs sm:text-sm">Demo</span>
                   </div>
                   
                   <div className="flex items-center gap-2">

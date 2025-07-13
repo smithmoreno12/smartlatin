@@ -19,21 +19,21 @@ const HeroSection = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Título */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-foreground mb-8 leading-tight animate-fade-in">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground mb-6 sm:mb-8 leading-tight animate-fade-in px-4">
           ✨ Diseño, 🚀 Construcción e 🔧 Implementación
         </h1>
 
         {/* Descripción */}
-        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in px-4" style={{ animationDelay: "0.2s" }}>
           ¡Bienvenido a SmartLatin Technologies! 🌟 donde convertimos tus ideas en realidad...
         </p>
 
         {/* Botones CTA */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-fade-in px-4" style={{ animationDelay: "0.4s" }}>
           <Button
             type="button"
             onClick={() => scrollToSection("contacto")}
-            className="bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
             size="lg"
           >
             Contacto
@@ -43,7 +43,7 @@ const HeroSection = () => {
             type="button"
             onClick={() => scrollToSection("servicios")}
             variant="outline"
-            className="border-2 border-border text-foreground px-8 py-4 text-lg font-semibold hover:bg-accent transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+            className="border-2 border-border text-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:bg-accent transition-all duration-300 hover:scale-105 backdrop-blur-sm w-full sm:w-auto"
             size="lg"
           >
             Descubra nuestros servicios

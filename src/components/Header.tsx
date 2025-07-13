@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
+import PaymentModal from "./PaymentModal";
+import { CreditCard } from "lucide-react";
 
 const Header = () => {
   const [open, setOpen] = useState(false); // 👉 controla el menú móvil
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false);
 
   return (
     <header className="w-full py-4 px-6 sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
@@ -27,8 +30,17 @@ const Header = () => {
           <Link to="/about" className="nav-link">Acerca de</Link>
         </nav>
 
-        {/* Toggle dark/light + botón móvil */}
-        <div className="flex items-center gap-4">
+        {/* Botón pago + Toggle dark/light + botón móvil */}
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Button
+            onClick={() => setPaymentModalOpen(true)}
+            className="bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base px-3 sm:px-4 py-2"
+            size="sm"
+          >
+            <CreditCard className="w-4 h-4 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">Pagar Proyecto</span>
+            <span className="sm:hidden">Pagar</span>
+          </Button>
           <ThemeToggle />
           <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
             {open ? (
@@ -56,6 +68,11 @@ const Header = () => {
           </ul>
         </nav>
       )}
+
+      <PaymentModal 
+        open={paymentModalOpen} 
+        onOpenChange={setPaymentModalOpen} 
+      />
     </header>
   );
 };
